@@ -4,4 +4,4 @@ docs/.vuepress/dist/
 .vscode/
 
 # 隐藏私密信息
-secret/
+# secret/
