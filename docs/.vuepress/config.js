@@ -4,8 +4,9 @@ const head = require('./config/header/index')
 const nav = require('./config/navbar/index')
 const sidebar = require('./config/sidebar/index')
 const secret = require('./config/secret')
+
 module.exports = {
-    base: '/vuepress-blog/', // 网站根目录，提供资源的路径
+    base: '/', // 网站根目录，提供资源的路径
     title: '橙晨燕', // 网站的标题
     description: '鱼迷恋大海', // 网站描述SEO以meta标签渲染到网页上
     head, // 网站头部head标签里引用配置
@@ -49,7 +50,7 @@ module.exports = {
         // 项目开始时间
         startYear: '2020',
         // git地址
-        repo: 'visionwuwu/vuepress-blog',
+        repo: 'visionwuwu/blog-ccy',
         // 搜索设置
         search: true,
         searchMaxSuggestions: 10,
@@ -63,11 +64,12 @@ module.exports = {
         },
         // vssue评论组件配置
         vssueConfig: {
-            platform: 'gitee',
+            platform: 'github-v4',
             owner: 'visionwuwu',
-            repo: 'visionwuwu/vuepress-blog',
+            repo: 'blog-ccy',
             clientId: secret.clientId,
             clientSecret: secret.clientSecret,
+            autoCreateIssue: true
         },
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页 ！'
