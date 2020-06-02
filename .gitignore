@@ -1,0 +1,7 @@
+node_modules/
+gb-pages/
+docs/.vuepress/dist/
+.vscode/
+
+# 隐藏私密信息
+secret/
