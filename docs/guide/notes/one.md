@@ -1,0 +1,38 @@
+---
+title: today todos
+tags:
+- learning summary
+categories:
+- 学习总结
+---
+- vue和react的后台管理系统脚手架架构对比
+    - 人人快速开发平台
+    - vuepress + vue-reco-theme
+    - 前锋教育react教程
+- 权限管理方面
+- 业务方面
+    - 业务设计
+    - 业务难点
+    - 技术难点
+
+## BootStrap-css工具类库
+- global varibles
+- reboot
+- grid
+- components组件类库
+- 背景background
+- 边框border
+- 显示模式display
+- flex布局
+    - flex-direction
+    - justify-content
+    - align-items
+    - align-content
+    - align-self
+- float布局
+- position定位布局
+- 元素宽高几何属性(width + height)
+- text文本(a)
+- font字体
+- 间距spacing(margin padding)
+- 打印类
