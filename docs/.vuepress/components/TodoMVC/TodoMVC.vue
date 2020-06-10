@@ -147,14 +147,6 @@ export default {
       filterText: "all"
     };
   },
-  mounted() {
-    this.handlehashchange();
-    // 注册 hash（锚点） 的改变事件
-    window.onhashchange = this.handlehashchange;
-  },
-  beforeDestot() {
-    window.onhashchange = null;
-  },
   directives: {
     focus: {
       // 当被绑定的元素插入到 DOM 中时……
@@ -175,9 +167,6 @@ export default {
     }
   },
   methods: {
-    handlehashchange() {
-      this.filterText = window.location.hash.substr(2);
-    },
     handleNewTodoKeyDown(e) {
       // 0. 注册按下的回车事件
       // 1. 获取文本框的内容
@@ -312,6 +301,9 @@ export default {
       },
       deep: true // 深度监视，只有这样才能监视到数组或者对象孩子...孩子... 成员的改变
       // immediate: true // 无乱变化与否，你上来就给我调用一次，如何使用看需求
+    },
+    '$route'(route){
+      this.filterText = route.hash.substr(2);
     }
   }
 };
