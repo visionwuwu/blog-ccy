@@ -2,9 +2,9 @@
 title: 函数
 date: 2020-06-08
 tags:
-- highMath
+- 高数
 catagories: 
-- 大学
+- 大学知识
 ---
 
 <Boxx />

@@ -2,7 +2,7 @@
 title: 面向对象
 date: 2020-05-30
 tags: 
-- js
+- javascript
 categories: 
 - 前端
 ---

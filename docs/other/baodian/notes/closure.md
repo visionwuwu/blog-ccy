@@ -2,7 +2,7 @@
 title: 闭包
 date: 2020-05-25
 tags: 
-- js
+- javascript
 categories:
 - 前端
 ---

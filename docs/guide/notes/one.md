@@ -1,9 +1,5 @@
 ---
 title: today todos
-tags:
-- learning summary
-categories:
-- 学习总结
 ---
 - vue和react的后台管理系统脚手架架构对比
     - 人人快速开发平台

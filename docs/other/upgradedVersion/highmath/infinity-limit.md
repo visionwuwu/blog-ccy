@@ -1,9 +1,9 @@
 ---
-title: 多元函数
+title: 无穷小量和极限
 date: 2020-06-05
 isShowComments: false
 tags: 
-- highMath
+- 高数
 categories:
-- 大学
+- 大学知识
 ---

@@ -1,9 +1,8 @@
 ---
-title: 关于我
+title: 了解我
 isTimeLine: false
 sidebar: false
 isShowComments: true
-pageClass: about-page
 ---
 
 <p align="center" class="about-img-box">

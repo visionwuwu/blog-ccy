@@ -2,7 +2,7 @@
 title: let和const定义量
 date: 2020-05-18
 tags: 
-- ES6
+- javascript
 categories:
 - "前端"
 ---

@@ -2,7 +2,7 @@ module.exports = {
     '/views/': [
         '',
         {
-            title: 'JavaScript学习笔记',
+            title: 'JavaScript',
             collapsable: true,
             children: [
                 'front-end/javascript/highOrder',
@@ -25,53 +25,28 @@ module.exports = {
             children: []
         }
     ],
-    '/guide/': [
+    '/other/baodian/': [
+        '',
         {
-            title: '新手指南',
+            title: '前端面试题',
             collapsable: true,
             children: [
-                '/guide/notes/one',
-                '/guide/notes/two',
-            ]
-        },
-        {
-            title: '一级菜单2',
-            collapsable: true,
-            children: [
-                '/guide/notes/three',
-            ]
-        }
-    ],
-    '/baodian/zero': [
-        {
-            title: '初级开发篇',
-            collapsable: true,
-            children: [
-                '/baodian/zero/notes/css',
-                '/baodian/zero/notes/stackMemory',
-                '/baodian/zero/notes/closure',
-                '/baodian/zero/notes/deeplyClone',
-                '/baodian/zero/notes/oop',
-                '/baodian/zero/notes/async&sync',
-                '/baodian/zero/notes/debounce&throttle',
-                '/baodian/zero/notes/crp',
-                '/baodian/zero/notes/vue-question',
-                '/baodian/zero/notes/array-unique',
-                '/baodian/zero/notes/ten-algorithms',
-                '/baodian/zero/notes/promise',
+                'notes/css',
+                'notes/stackMemory',
+                'notes/closure',
+                'notes/deeplyClone',
+                'notes/oop',
+                'notes/async&sync',
+                'notes/debounce&throttle',
+                'notes/crp',
+                'notes/vue-question',
+                'notes/array-unique',
+                'notes/ten-algorithms',
+                'notes/promise',
             ]
         }
     ],
-    '/baodian/high': [
-        {
-            title: '中高进阶篇',
-            collapsable: true,
-            children: [
-                '/baodian/high/notes/one',
-            ]
-        }
-    ],
-    '/projects/xm-shopping/':[
+    '/other/projects/xm-shopping/':[
         {
             title: '仿小米商城',
             collapsable: true,
@@ -82,7 +57,8 @@ module.exports = {
             ]
         }
     ],
-    '/upgradedVersion/':[
+    '/other/upgradedVersion/':[
+        '',
         {
             title: '高数',
             collapsable: true,
