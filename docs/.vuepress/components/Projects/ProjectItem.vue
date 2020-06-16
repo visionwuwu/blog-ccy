@@ -50,11 +50,12 @@
     background-color: rgba(237, 246, 247, 0.65);
     border-radius: 4px;
     color: #34495e;
-    transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out,transform .1s ease-in-out;
   }
   .project-item-card-wrap:hover {
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-10px);
   }
   .card-title {
     margin-top: 10px;

@@ -1,91 +1,92 @@
 <template>
-  <div class="com-todomvc">
-    <div class="com-todomvc__content">
+  <ClientOnly>
+    <div class="com-todomvc">
+      <div class="com-todomvc__content">
         <section class="todoapp">
-      <header class="header">
-        <h1>todos</h1>
-        <input
-          class="new-todo"
-          v-focus
-          @keydown.enter="handleNewTodoKeyDown"
-          placeholder="What needs to be done?"
-          autofocus
-        />
-      </header>
-      <!-- This section should be hidden by default and shown when there are todos -->
-      <template v-if="todos.length">
-        <section class="main">
-          <!-- 之前的方式 -->
-          <!-- <input
+          <header class="header">
+            <h1>todos</h1>
+            <input
+              class="new-todo"
+              v-focus
+              @keydown.enter="handleNewTodoKeyDown"
+              placeholder="What needs to be done?"
+              autofocus
+            />
+          </header>
+          <!-- This section should be hidden by default and shown when there are todos -->
+          <template v-if="todos.length">
+            <section class="main">
+              <!-- 之前的方式 -->
+              <!-- <input
           id="toggle-all"
           @change="handleToggleAllChange"
           class="toggle-all"
           :checked="toggleAllStat"
-          type="checkbox">-->
+              type="checkbox">-->
 
-          <!--
+              <!--
             双向绑定结合计算属性实现同样功能
             对数据驱动视图理解越深，这种代码可以写到非常的简洁
             这就是 Vue 的方式
             相比上面的代码要更精妙一些
-          -->
-          <!--
+              -->
+              <!--
             这里的复选框双向绑定了 toggleAllStat 属性（计算属性）
             无论是普通属性还是计算属性都要取值和赋值
             这里我们绑定的属性比较特殊，所以当你访问 toggleAllStat 会调用计算属性的 get 方法
             当你为 toggleAllStat 重新赋值的时候就会调用 set 方法
             我们的表单控件具有双向绑定
-          -->
-          <input id="toggle-all" class="toggle-all" v-model="toggleAllStat" type="checkbox" />
-          <label for="toggle-all">Mark all as complete</label>
-          <ul class="todo-list">
-            <!-- These are here just to show the structure of the list items -->
-            <!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
-            <!--
+              -->
+              <input id="toggle-all" class="toggle-all" v-model="toggleAllStat" type="checkbox" />
+              <label for="toggle-all">Mark all as complete</label>
+              <ul class="todo-list">
+                <!-- These are here just to show the structure of the list items -->
+                <!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
+                <!--
             任务项有三种样式状态：
               未完成：无样式
               已完成：completed
               编辑：editing
-            -->
-            <!--
+                -->
+                <!--
             当我双击的时候，我就把 currentEditing = 当前双击的这个任务项
             每个任务项 class 的 editing 都有一个判定：如果 currentEditing === 我自己 ，则该任务项就获得 editing 样式
-            -->
-            <li
-              :class="{
+                -->
+                <li
+                  :class="{
               completed: item.completed,
               editing: currentEditing === item
             }"
-              v-for="(item, index) in filterTodos"
-            >
-              <div class="view">
-                <input class="toggle" v-model="item.completed" type="checkbox" />
-                <label @dblclick="handleGetEditingDblclick(item)">{{ item.title }}</label>
-                <!--
+                  v-for="(item, index) in filterTodos"
+                >
+                  <div class="view">
+                    <input class="toggle" v-model="item.completed" type="checkbox" />
+                    <label @dblclick="handleGetEditingDblclick(item)">{{ item.title }}</label>
+                    <!--
                 当事件处理函数没有传参的时候，第一个参数就是默认的事件源对象：event
                 当手动传递了参数的时候，就没办法获取默认的 event 事件源对象
                 这个时候我们可以手动在调用方法的时候传递 $event 来接收 event 事件源对象
-                -->
-                <button class="destroy" @click="handleRemoveTodoClick(index, $event)"></button>
-              </div>
-              <!--
+                    -->
+                    <button class="destroy" @click="handleRemoveTodoClick(index, $event)"></button>
+                  </div>
+                  <!--
               由于我们还有一个取消编辑不保存的功能，所以我们这里就不使用双向数据绑定
-              -->
-              <input
-                class="edit"
-                :value="item.title"
-                @keydown.enter="handleSaveEditKeydown(item, index, $event)"
-                @blur="handleSaveEditKeydown(item, index, $event)"
-                @keydown.esc="handleCancelEditEsc"
-                v-todo-focus="currentEditing === item"
-              />
-            </li>
-          </ul>
-        </section>
-        <!-- This footer should hidden by default and shown when there are todos -->
-        <footer class="footer">
-          <!-- This should be `0 items left` by default -->
-          <!--
+                  -->
+                  <input
+                    class="edit"
+                    :value="item.title"
+                    @keydown.enter="handleSaveEditKeydown(item, index, $event)"
+                    @blur="handleSaveEditKeydown(item, index, $event)"
+                    @keydown.esc="handleCancelEditEsc"
+                    v-todo-focus="currentEditing === item"
+                  />
+                </li>
+              </ul>
+            </section>
+            <!-- This footer should hidden by default and shown when there are todos -->
+            <footer class="footer">
+              <!-- This should be `0 items left` by default -->
+              <!--
           在模板中放入太多的逻辑会让模板过重且难以维护
           当你想要在模板中多次引用此处功能时，就会更加难以处理。
           所以，对于任何复杂逻辑，你都应当使用计算属性。
@@ -95,43 +96,46 @@
           2. 使用计算属性
               1. 不要让模板逻辑太重
               2. 解决性能问题
-          -->
-          <!-- <span class="todo-count"><strong>{{ todos.filter(t => !t.completed).length }}</strong> item left</span> -->
-          <!-- <span class="todo-count"><strong>{{ getRemaningCount() }}</strong> item left</span>
-          <span class="todo-count"><strong>{{ getRemaningCount() }}</strong> item left</span>-->
+              -->
+              <!-- <span class="todo-count"><strong>{{ todos.filter(t => !t.completed).length }}</strong> item left</span> -->
+              <!-- <span class="todo-count"><strong>{{ getRemaningCount() }}</strong> item left</span>
+              <span class="todo-count"><strong>{{ getRemaningCount() }}</strong> item left</span>-->
 
-          <span class="todo-count">
-            <strong>{{ remaningCount }}</strong> item left
-          </span>
+              <span class="todo-count">
+                <strong>{{ remaningCount }}</strong> item left
+              </span>
 
-          <!-- Remove this if you don't implement routing -->
-          <ul class="filters">
-            <li>
-              <a :class="{selected: filterText === ''}" href="#/">All</a>
-            </li>
-            <li>
-              <a :class="{selected: filterText === 'active'}" href="#/active">Active</a>
-            </li>
-            <li>
-              <a :class="{selected: filterText === 'completed'}" href="#/completed">Completed</a>
-            </li>
-          </ul>
-          <!-- Hidden if no completed items are left ↓ -->
-          <button
-            class="clear-completed"
-            v-if="todos.some(item => item.completed)"
-            @click="handleClearAllDoneClick"
-          >Clear completed</button>
+              <!-- Remove this if you don't implement routing -->
+              <ul class="filters">
+                <li>
+                  <a :class="{selected: filterText === ''}" href="#/">All</a>
+                </li>
+                <li>
+                  <a :class="{selected: filterText === 'active'}" href="#/active">Active</a>
+                </li>
+                <li>
+                  <a :class="{selected: filterText === 'completed'}" href="#/completed">Completed</a>
+                </li>
+              </ul>
+              <!-- Hidden if no completed items are left ↓ -->
+              <button
+                class="clear-completed"
+                v-if="todos.some(item => item.completed)"
+                @click="handleClearAllDoneClick"
+              >Clear completed</button>
+            </footer>
+          </template>
+        </section>
+        <footer>
+          <p>
+            <a id="btn-back-home" href="/index.html">返回首页</a>
+          </p>
         </footer>
-      </template>
-    </section>
-    <footer>
-      <p>
-        <a id="btn-back-home" href="/index.html">返回首页</a>
-      </p>
-    </footer>
+      </div>
+
+      <Common-Ribbon />
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script>
@@ -297,12 +301,12 @@ export default {
     todos: {
       handler(val, oldVal) {
         // 这里既可以通过 this.todos 来访问，也可以通过 val 来得到最新的 todos
-        window.localStorage.setItem("todos", JSON.stringify(val));
+        localStorage.setItem("todos", JSON.stringify(val));
       },
       deep: true // 深度监视，只有这样才能监视到数组或者对象孩子...孩子... 成员的改变
       // immediate: true // 无乱变化与否，你上来就给我调用一次，如何使用看需求
     },
-    '$route'(route){
+    $route(route) {
       this.filterText = route.hash.substr(2);
     }
   }

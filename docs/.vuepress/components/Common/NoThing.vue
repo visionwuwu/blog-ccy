@@ -17,7 +17,7 @@ export default {
 .no-thing {
   padding: 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   color: var(--text-color);
   font-weight: bold;
 }

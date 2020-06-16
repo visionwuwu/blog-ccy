@@ -69,6 +69,7 @@ button {
 	font-size: 100px;
 	font-weight: 100;
 	text-align: center;
+	margin: 20px 0;
 	color: rgba(175, 47, 47, 0.15);
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
@@ -388,6 +389,7 @@ html .clear-completed:active {
 @media (max-width: 768px){
 	.todoapp h1{
 		font-size: 70px;
+		top: -120px;
 	}
 	.new-todo{
 		padding: 10px 16px 10px 60px;
