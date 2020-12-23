@@ -2,10 +2,6 @@
 title: 仿小米商城uni-app实战项目
 catalog: true
 date: 2020-05-05
-tags:
-- 'uni-app'
-categories: 
-- '前端'
 ---
 
 # 仿小米商城uni-app实战项目
@@ -70,10 +66,6 @@ categories:
  - 数字天堂
  > [uni-app官网](https://uniapp.dcloud.io/)
 
-
-
-
-
 <style>
     .display-list{
         margin: 10px 0;
@@ -84,6 +76,5 @@ categories:
         margin: 0 15px;
         border-radius: 8px;
     }
-        
 </style>
 

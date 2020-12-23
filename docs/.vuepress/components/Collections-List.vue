@@ -18,7 +18,7 @@
     <!-- 分页 -->
     <pagation
       class="pagation"
-      :total="booksData.length"
+      :total="listData.length"
       :currentPage="currentPage"
       :perPage="9"
       @getCurrentPage="getCurrentPage"
@@ -29,6 +29,12 @@
 <script>
 import booksData from '../data/booksData'
 export default {
+  props: {
+    listData: {
+      type: Array,
+      default: () => []
+    }
+  },
   data () {
     return {
       booksData,
@@ -39,7 +45,7 @@ export default {
     currentPageData () {
       const start = (this.currentPage - 1) * 9
       const end = this.currentPage * 9
-      return this.booksData.slice(start, end)
+      return this.listData.slice(start, end)
     }
   },
   methods: {
@@ -63,7 +69,7 @@ export default {
     .blog-item
       margin-bottom 4rem
       width 31%
-      height 140px
+      height 350px
       transition: all .5s;
       .info
         box-sizing border-box

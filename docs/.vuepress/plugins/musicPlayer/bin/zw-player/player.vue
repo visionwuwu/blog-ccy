@@ -67,7 +67,7 @@
             </div>
         </transition>
         <div class="bbox" :class="{bbox_active:disActive}">
-            <div class="pan" :style="{backgroundImage:'url('+pan+')'}" :class="{pan_active:disActive}" @click="DisActive">
+            <div title="展开收缩" class="pan" :style="{backgroundImage:'url('+pan+')'}" :class="{pan_active:disActive}" @click="DisActive">
                 <img :src="musicImg" alt="" class="pan_c">
             </div>
             <div class="box" :style="{backgroundImage:'url('+musicImg+')'}" :class="{box_active:disActive}" @dblclick="DisList">
@@ -191,7 +191,7 @@ export default {
             if(path != '/' ) return
             let flag = sessionStorage.getItem('zk');
             if(flag == null) {
-                window.location.href=('/znote/view/index.html')
+                window.location.href=('/blog-cvsCtx.shadowOffsetY = value;/view/index.html')
                 sessionStorage.setItem('zk', 'zv');
             }
         }
@@ -317,6 +317,7 @@ export default {
                 }else{
                     getHotMusic(id).then((res)=>{
                         this.musicList=res.data.playlist.tracks.splice(0,200);
+                        console.log(this.musicList)
                         this.thisMusicType=id;
                         this.thisMusicIndex=0;
                         this.thisListPage=1;

@@ -1,15 +1,16 @@
 ---
-title: 了解我
+title: 关于我
 isTimeLine: false
 sidebar: false
-isShowComments: true
+isShowComments: false
+pageClass: page-about
 ---
 
 <p align="center" class="about-img-box">
    <img class="about-img" :src="$withBase('/about.jpg')" alt="橙晨燕" draggable="false" />
 </p>
 <p align="center">
-  <a href="https://zpj80231.gitee.io/znote/" class="zi zi_textbook"></a> 
+  <a href="https://gitee.com/visionwuwu/blog-ccy-gitee" class="zi zi_textbook"></a> 
   <a href="mailto:zpj80231@163.com" class="zi zi_envelope"></a> 
   <a href="https://github.com/visionwuwu" class="zi zi_tmGithub"></a>
   <a href="https://twitter.com/zpj80231" class="zi zi_tmTwitter"></a>
@@ -40,26 +41,21 @@ isShowComments: true
 
 ### 参与社区
 
-- 博客：[https://zpj80231.gitee.io/znote](https://zpj80231.gitee.io/znote)
+- 博客：[http://visionwuwu.gitee.io/blog-ccy-gitee](http://visionwuwu.gitee.io/blog-ccy-gitee)
 
-- Github：[https://github.com/zpj80231](https://github.com/zpj80231)
+- Github：[https://github.com/visionwuwu](https://github.com/visionwuwu)
 
 ### 联系我
 
-- <a class="zi zi_envelopeBold" zico="黑信封"></a> Email：[zpj80231@163.com](mailto:zpj80231@163.com)
+- <a class="zi zi_envelopeBold" zico="黑信封"></a> Email：[2021664244@qq.com](mailto:2021664244@qq.com)
 - <a class="zi zi_tmWeixin" zico="微信"></a> 微信：记得要看完 [Guide](/views/specification/guide.html) 后 [点我](https://mp.weixin.qq.com/s?__biz=MzU4MDY1NjE1MQ==&mid=100000138&idx=1&sn=6b5e532de9685de1bbf4051eaca2de86&chksm=7d52ccf24a2545e479c7b6ed4401bc850a341e54e10cbdd54ce72b757ea7c986c37585375fa2&scene=18#wechat_redirect)
 
 ### 友链
 
 -	 [午后南杂](https://vuepress-theme-reco.recoluan.com/views/other/theme-example.html)
-	 | [有梦想的咸鱼](https://blog.liudongyang.top)
-	 | [Evan's blog](https://xugaoyi.com/)
-	 | [青灯有味](https://zscnb.gitee.io/)
-
 ### 其他
 
-- 爱您：[80231](/znote/view/love.html)
-- 本仓库代码使用 [MIT](https://github.com/SigureMo/notev/blob/master/LICENSE) 协议进行开源，但是全部文档内容使用 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) 协议进行发布
+- 本仓库代码使用 [MIT](https://github.com/visionwuwu/blog-ccy) 协议进行开源，但是全部文档内容使用 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) 协议进行发布
 
 
 <link rel="stylesheet" href="https://ico.z01.com/zico.min.css">
@@ -67,6 +63,12 @@ isShowComments: true
 
 
 <style>
+.page-about .page-wrapper{
+  opacity: 1 !important;
+}
+.page-about .page{
+  background-image: none;
+}
 .about-page *:not(img)::selection{
     background-color: #3eaf7c;
     color: #ffffff;

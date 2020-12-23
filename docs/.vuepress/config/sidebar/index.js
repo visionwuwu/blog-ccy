@@ -1,64 +1,35 @@
 module.exports = {
-    '/views/': [
-        '',
+    "/front-end/": [
+        "",
         {
             title: 'JavaScript',
             collapsable: true,
             children: [
-                'front-end/javascript/highOrder',
-                'front-end/javascript/AOP',
-                'front-end/javascript/events',
-                'front-end/javascript/observer'
+                'javascript/highOrder',
+                'javascript/AOP',
+                'javascript/events',
+                'javascript/observer'
             ]
         },
         {
             title: 'Vue',
             collapsable: true,
             children: [
-                'front-end/vue/vue2-simple-mvvm',
-                'front-end/vue/vuex-origin-code',
+                'vue/vue2-simple-mvvm',
+                'vue/vuex-origin-code',
             ]
         },
         {
             title: 'React',
             collapsable: true,
             children: []
-        }
+        },
     ],
-    '/other/baodian/': [
-        '',
-        {
-            title: '前端面试题',
-            collapsable: true,
-            children: [
-                'notes/css',
-                'notes/stackMemory',
-                'notes/closure',
-                'notes/deeplyClone',
-                'notes/oop',
-                'notes/async&sync',
-                'notes/debounce&throttle',
-                'notes/crp',
-                'notes/vue-question',
-                'notes/array-unique',
-                'notes/ten-algorithms',
-                'notes/promise',
-            ]
-        }
+    "/back-end/": [
+        "",
     ],
-    '/other/projects/xm-shopping/':[
-        {
-            title: '仿小米商城',
-            collapsable: true,
-            children: [
-                'init/initProject',
-                'index/makePage',
-                'index/realizeFunction'
-            ]
-        }
-    ],
-    '/other/upgradedVersion/':[
-        '',
+    "/collegeCourses/": [
+        "",
         {
             title: '高数',
             collapsable: true,
@@ -76,6 +47,50 @@ module.exports = {
             title: '英语',
             collapsable: true,
             children: []
+        },
+    ],
+    "/baodian/": [
+        {
+            title: "面试宝典",
+            collapsable: true,
+            children: [
+                'notes/css',
+                'notes/stackMemory',
+                'notes/closure',
+                'notes/deeplyClone',
+                'notes/oop',
+                'notes/async&sync',
+                'notes/debounce&throttle',
+                'notes/crp',
+                'notes/vue-question',
+                'notes/array-unique',
+                'notes/ten-algorithms',
+                'notes/promise',
+            ]
+        }
+    ],
+    "/eassy/": [
+        "",
+        "article-beiying"
+    ],
+    "/day3+2/": [
+        "",
+        {
+            title: "2020年1月",
+            children: [
+                "2020-01/0001"
+            ]
+        }
+    ],
+    '/other/':[
+        {
+            title: '仿小米商城',
+            collapsable: true,
+            children: [
+                'projects/xm-shopping/init/initProject',
+                'projects/xm-shopping/index/makePage',
+                'projects/xm-shopping/index/realizeFunction'
+            ]
         }
     ]
 }

@@ -1,30 +1,43 @@
 module.exports = [
     { text: '主页', link: '/index.html', icon: 'reco-home' },
     { text: '时间线', link: '/timeline/', icon: 'reco-date' },
-    { text: '关于我', link: '/about/', icon: 'reco-message' },
+    { 
+        text: '收藏集', 
+        icon: 'reco-date',
+        items: [
+            {
+                text: "爱看的书",
+                link: '/collections/books'
+            },
+            {
+                text: "爱追的剧",
+                link: "/collections/tv"
+            }
+        ]
+    },
     {
         text: '其他',
         icon: 'reco-document',
         items: [
             {
-                text: '面试宝典 📚',
-                link: '/other/baodian/'
+                text: "每日壹题 📚",
+                link: "/day3+2/"
+            },
+            {
+                text: '技术文档 📖',
+                link: '/other/documents'
+            },
+            {
+                text: '收藏文章 📖',
+                link: '/other/collectArticles'
             },
             {
                 text: '项目展示 🚀',
-                link: '/other/projects/'
+                link: '/other/projectPreview/'
             },
             {
                 text: '项目总结 📝',
                 link: '/other/projects/xm-shopping/',
-            },
-            {
-                text: '大学知识 📖',
-                link: '/other/upgradedVersion/'
-            },
-            {
-                text: 'TodoMVC 🌈',
-                link: '/other/todoMVC/'
             },
             {
                 text: '工具箱 📦',
@@ -38,14 +51,5 @@ module.exports = [
             }
         ]
     },
-    { 
-        text: '收藏集', 
-        icon: 'reco-date',
-        items: [
-            {
-                text: "最爱看的书",
-                link: '/collections/books'
-            }
-        ]
-    }
+    { text: '关于我', link: '/about/', icon: 'reco-message' }
 ]

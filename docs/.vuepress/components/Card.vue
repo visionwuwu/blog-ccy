@@ -27,6 +27,9 @@
     &.back {
       transform: rotateY(-180deg);
     }
+    img {
+      width: 100%;
+    }
   }
   &:hover {
     .front {
