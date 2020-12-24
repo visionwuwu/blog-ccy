@@ -6,7 +6,7 @@ const sidebar = require("./config/sidebar/index");
 const secret = require("./config/secret");
 
 module.exports = {
-  base: "/blog-ccy/", // 网站根目录，提供资源的路径
+  // base: "/blog-ccy/", // 网站根目录，提供资源的路径
   title: "橙晨燕", // 网站的标题
   description: "鱼迷恋大海", // 网站描述SEO以meta标签渲染到网页上
   head, // 网站头部head标签里引用配置
