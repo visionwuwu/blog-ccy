@@ -1,4 +1,8 @@
+[![Build Status](https://travis-ci.com/visionwuwu/blog-ccy.svg?branch=master)](https://travis-ci.com/visionwuwu/blog-ccy)
+[![GitHub issues](https://img.shields.io/github/issues/visionwuwu/blog-ccy)](https://github.com/visionwuwu/blog-ccy/issues)
+[![GitHub stars](https://img.shields.io/github/stars/visionwuwu/blog-ccy)](https://github.com/visionwuwu/blog-ccy/stargazers)
 # blog
+
 
 #### 介绍
 vuepress搭建的博客，博客名橙晨燕。
