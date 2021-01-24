@@ -5,14 +5,19 @@ isTimeLine: false
 isShowComments: false
 ---
 
+<template>
+    <Collections-List :listData="tvData" />
+</template>
 
-<Collections-List :listData="[
-    {
-        thumbnail: 'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2618730089.webp',
-        name: '斗罗大陆',
-        desc: '鱼迷恋大海',
-        link: 'https://v.qq.com/x/cover/m441e3rjq9kwpsc/m00253deqqo.html'
+<script>
+import tvData from 'data/tvData.js'
+export default {
+    data () {
+        return {
+            tvData
+        }
     }
-]" />
+}
+</script>
 
 

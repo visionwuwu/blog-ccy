@@ -20,7 +20,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        "@alias": path.resolve(__dirname, "./"),
+        "@": path.resolve(__dirname, "./"),
+        "data": path.resolve(__dirname, './data')
       },
     },
   },

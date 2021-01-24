@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import booksData from '../data/booksData'
+// import booksData from '../data/booksData'
 export default {
   props: {
     listData: {
@@ -37,7 +37,6 @@ export default {
   },
   data () {
     return {
-      booksData,
       currentPage: 1
     }
   },
@@ -59,16 +58,17 @@ export default {
 }
 </script>
 
-
 <style lang="stylus" scoped>
 .theme-example
   .blog-list-wrapper
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     .blog-item
-      margin-bottom 4rem
+      margin-bottom 3rem
       width 31%
+      margin-right: 0.5rem
+      margin-left: 0.5rem
       height 350px
       transition: all .5s;
       .info
