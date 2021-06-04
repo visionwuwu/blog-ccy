@@ -24,11 +24,15 @@ module.exports = [
                 link: "/day3+2/"
             },
             {
+                text: "CET-4 🛰️",
+                link: "/CET-4/"
+            },
+            {
                 text: '技术文档 📖',
                 link: '/other/documents'
             },
             {
-                text: '收藏文章 📖',
+                text: '收藏文章 📮',
                 link: '/other/collectArticles'
             },
             {

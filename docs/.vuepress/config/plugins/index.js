@@ -47,7 +47,7 @@ module.exports = [
         selector: 'img.zoom-custom-imgs'
     }],
     'flowchart',
-    require('../../plugins/musicPlayer/index'),
+    // require('../../plugins/musicPlayer/index'),
     ['vuepress-plugin-smooth-scroll'],
     ["vuepress-plugin-boxx"],
     ["vuepress-plugin-nuggets-style-copy", {

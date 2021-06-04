@@ -53,6 +53,7 @@ pageClass: page-about
 ### 友链
 
 -	 [午后南杂](https://vuepress-theme-reco.recoluan.com/views/other/theme-example.html)
+-	 [南壹深山](http://blog.nchfly.cn:1959/)
 ### 其他
 
 - 本仓库代码使用 [MIT](https://github.com/visionwuwu/blog-ccy) 协议进行开源，但是全部文档内容使用 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) 协议进行发布
